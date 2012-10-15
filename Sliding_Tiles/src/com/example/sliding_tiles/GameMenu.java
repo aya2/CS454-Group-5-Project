@@ -1,10 +1,10 @@
 package com.example.sliding_tiles;
 
-import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
 import android.view.Menu;
-import android.view.MenuItem;
-import android.support.v4.app.NavUtils;
+import android.view.View;
 
 public class GameMenu extends Activity {
 
@@ -18,6 +18,12 @@ public class GameMenu extends Activity {
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.activity_game_menu, menu);
         return true;
+    }
+    
+    /*Called when user clicks Number Button*/
+    public void OpenNumberMode(View view) {
+    	Intent intent = new Intent(this, NumberMode.class);
+    	startActivity(intent);
     }
 
     
