@@ -11,5 +11,7 @@
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_number_mode">NumberMode</string>
     <string name="title_activity_math_mode">MathMode</string>
+    <string name="title_activity_picture_mode">PictureMode</string>
+    <string name="title_activity_instructions">Instructions</string>
 
 </resources>

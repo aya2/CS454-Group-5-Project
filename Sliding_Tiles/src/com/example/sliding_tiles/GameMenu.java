@@ -32,6 +32,18 @@ public class GameMenu extends Activity {
     	Intent intent = new Intent(this, MathMode.class);
     	startActivity(intent);
     }
+    
+    public void OpenPictureMode(View view)
+    {
+    	Intent intent = new Intent(this, PictureMode.class);
+    	startActivity(intent);
+    }
+    
+    public void OpenInstructions(View view)
+    {
+    	Intent intent = new Intent(this, Instructions.class);
+    	startActivity(intent);
+    }
 
     
 }

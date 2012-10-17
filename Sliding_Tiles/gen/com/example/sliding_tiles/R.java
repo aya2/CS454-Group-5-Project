@@ -18,35 +18,61 @@ public final class R {
     public static final class drawable {
         public static final int ic_action_search=0x7f020000;
         public static final int ic_launcher=0x7f020001;
-        public static final int tile1=0x7f020002;
-        public static final int tile10=0x7f020003;
-        public static final int tile11=0x7f020004;
-        public static final int tile12=0x7f020005;
-        public static final int tile13=0x7f020006;
-        public static final int tile14=0x7f020007;
-        public static final int tile15=0x7f020008;
-        public static final int tile16=0x7f020009;
-        public static final int tile17=0x7f02000a;
-        public static final int tile18=0x7f02000b;
-        public static final int tile19=0x7f02000c;
-        public static final int tile2=0x7f02000d;
-        public static final int tile20=0x7f02000e;
-        public static final int tile21=0x7f02000f;
-        public static final int tile22=0x7f020010;
-        public static final int tile23=0x7f020011;
-        public static final int tile24=0x7f020012;
-        public static final int tile3=0x7f020013;
-        public static final int tile4=0x7f020014;
-        public static final int tile5=0x7f020015;
-        public static final int tile6=0x7f020016;
-        public static final int tile7=0x7f020017;
-        public static final int tile8=0x7f020018;
-        public static final int tile9=0x7f020019;
-        public static final int tile_equal=0x7f02001a;
-        public static final int tile_minus=0x7f02001b;
-        public static final int tile_multiply=0x7f02001c;
-        public static final int tile_plus=0x7f02001d;
-        public static final int tileempty1=0x7f02001e;
+        public static final int picture01=0x7f020002;
+        public static final int picture02=0x7f020003;
+        public static final int picture03=0x7f020004;
+        public static final int picture04=0x7f020005;
+        public static final int picture05=0x7f020006;
+        public static final int picture06=0x7f020007;
+        public static final int picture07=0x7f020008;
+        public static final int picture08=0x7f020009;
+        public static final int picture09=0x7f02000a;
+        public static final int picture10=0x7f02000b;
+        public static final int picture11=0x7f02000c;
+        public static final int picture12=0x7f02000d;
+        public static final int picture13=0x7f02000e;
+        public static final int picture14=0x7f02000f;
+        public static final int picture15=0x7f020010;
+        public static final int picture16=0x7f020011;
+        public static final int picture17=0x7f020012;
+        public static final int picture18=0x7f020013;
+        public static final int picture19=0x7f020014;
+        public static final int picture20=0x7f020015;
+        public static final int picture21=0x7f020016;
+        public static final int picture22=0x7f020017;
+        public static final int picture23=0x7f020018;
+        public static final int picture24=0x7f020019;
+        public static final int pictureempty=0x7f02001a;
+        public static final int picturefinished=0x7f02001b;
+        public static final int tile1=0x7f02001c;
+        public static final int tile10=0x7f02001d;
+        public static final int tile11=0x7f02001e;
+        public static final int tile12=0x7f02001f;
+        public static final int tile13=0x7f020020;
+        public static final int tile14=0x7f020021;
+        public static final int tile15=0x7f020022;
+        public static final int tile16=0x7f020023;
+        public static final int tile17=0x7f020024;
+        public static final int tile18=0x7f020025;
+        public static final int tile19=0x7f020026;
+        public static final int tile2=0x7f020027;
+        public static final int tile20=0x7f020028;
+        public static final int tile21=0x7f020029;
+        public static final int tile22=0x7f02002a;
+        public static final int tile23=0x7f02002b;
+        public static final int tile24=0x7f02002c;
+        public static final int tile3=0x7f02002d;
+        public static final int tile4=0x7f02002e;
+        public static final int tile5=0x7f02002f;
+        public static final int tile6=0x7f020030;
+        public static final int tile7=0x7f020031;
+        public static final int tile8=0x7f020032;
+        public static final int tile9=0x7f020033;
+        public static final int tile_equal=0x7f020034;
+        public static final int tile_minus=0x7f020035;
+        public static final int tile_multiply=0x7f020036;
+        public static final int tile_plus=0x7f020037;
+        public static final int tileempty1=0x7f020038;
     }
     public static final class id {
         public static final int MathModeBtn=0x7f080001;
@@ -55,19 +81,23 @@ public final class R {
         public static final int button1=0x7f080004;
         public static final int gridView1=0x7f080005;
         public static final int gridview=0x7f080007;
-        public static final int menu_settings=0x7f080008;
+        public static final int menu_settings=0x7f080009;
+        public static final int test_image=0x7f080008;
         public static final int textView1=0x7f080000;
         public static final int textView2=0x7f080006;
     }
     public static final class layout {
         public static final int activity_game_menu=0x7f030000;
-        public static final int activity_math_mode=0x7f030001;
-        public static final int activity_number_mode=0x7f030002;
+        public static final int activity_instructions=0x7f030001;
+        public static final int activity_math_mode=0x7f030002;
+        public static final int activity_number_mode=0x7f030003;
+        public static final int activity_picture_mode=0x7f030004;
     }
     public static final class menu {
         public static final int activity_game_menu=0x7f070000;
-        public static final int activity_math_mode=0x7f070001;
-        public static final int activity_number_mode=0x7f070002;
+        public static final int activity_instructions=0x7f070001;
+        public static final int activity_math_mode=0x7f070002;
+        public static final int activity_number_mode=0x7f070003;
     }
     public static final class string {
         public static final int app_name=0x7f050000;
@@ -79,8 +109,10 @@ public final class R {
         public static final int num_mode_btn=0x7f050005;
         public static final int pic_mode_btn=0x7f050006;
         public static final int title_activity_game_menu=0x7f050003;
+        public static final int title_activity_instructions=0x7f05000c;
         public static final int title_activity_math_mode=0x7f05000a;
         public static final int title_activity_number_mode=0x7f050009;
+        public static final int title_activity_picture_mode=0x7f05000b;
     }
     public static final class style {
         public static final int AppTheme=0x7f060000;

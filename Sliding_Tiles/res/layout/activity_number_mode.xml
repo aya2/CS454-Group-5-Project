@@ -2,7 +2,7 @@
 	    android:id="@+id/gridview"
 	    android:layout_width="fill_parent" 
 	    android:layout_height="fill_parent"
-	    android:columnWidth="130dp"
+	    android:columnWidth="90dp"
 	    android:numColumns="5"
 	    android:verticalSpacing="-1px"
 	    android:horizontalSpacing="500dp"

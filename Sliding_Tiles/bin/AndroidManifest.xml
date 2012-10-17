@@ -30,7 +30,15 @@
         <activity
             android:name=".MathMode"
             android:label="@string/title_activity_math_mode" >
-           
+        </activity>
+        <activity
+            android:name=".PictureMode"
+            android:label="@string/title_activity_picture_mode" >
+        </activity>
+        <activity
+            android:name=".Instructions"
+            android:label="@string/title_activity_instructions" >
+            
         </activity>
     </application>
 
