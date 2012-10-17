@@ -9,7 +9,7 @@
         android:id="@+id/gridView1"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:columnWidth="130dp"
+        android:columnWidth="90dp"
         android:gravity="center"
         android:horizontalSpacing="500dp"
         android:numColumns="5"

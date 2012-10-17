@@ -10,5 +10,6 @@
     <string name="instructions_btn">Instructions</string>
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_number_mode">NumberMode</string>
+    <string name="title_activity_math_mode">MathMode</string>
 
 </resources>

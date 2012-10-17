@@ -27,6 +27,11 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.sliding_tiles" />
         </activity>
+        <activity
+            android:name=".MathMode"
+            android:label="@string/title_activity_math_mode" >
+           
+        </activity>
     </application>
 
 </manifest>
