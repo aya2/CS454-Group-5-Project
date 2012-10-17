@@ -42,24 +42,32 @@ public final class R {
         public static final int tile7=0x7f020017;
         public static final int tile8=0x7f020018;
         public static final int tile9=0x7f020019;
-        public static final int tileempty1=0x7f02001a;
+        public static final int tile_equal=0x7f02001a;
+        public static final int tile_minus=0x7f02001b;
+        public static final int tile_multiply=0x7f02001c;
+        public static final int tile_plus=0x7f02001d;
+        public static final int tileempty1=0x7f02001e;
     }
     public static final class id {
         public static final int MathModeBtn=0x7f080001;
         public static final int NumModeBtn=0x7f080002;
         public static final int PicModeBtn=0x7f080003;
         public static final int button1=0x7f080004;
-        public static final int gridview=0x7f080005;
-        public static final int menu_settings=0x7f080006;
+        public static final int gridView1=0x7f080005;
+        public static final int gridview=0x7f080007;
+        public static final int menu_settings=0x7f080008;
         public static final int textView1=0x7f080000;
+        public static final int textView2=0x7f080006;
     }
     public static final class layout {
         public static final int activity_game_menu=0x7f030000;
-        public static final int activity_number_mode=0x7f030001;
+        public static final int activity_math_mode=0x7f030001;
+        public static final int activity_number_mode=0x7f030002;
     }
     public static final class menu {
         public static final int activity_game_menu=0x7f070000;
-        public static final int activity_number_mode=0x7f070001;
+        public static final int activity_math_mode=0x7f070001;
+        public static final int activity_number_mode=0x7f070002;
     }
     public static final class string {
         public static final int app_name=0x7f050000;
@@ -71,6 +79,7 @@ public final class R {
         public static final int num_mode_btn=0x7f050005;
         public static final int pic_mode_btn=0x7f050006;
         public static final int title_activity_game_menu=0x7f050003;
+        public static final int title_activity_math_mode=0x7f05000a;
         public static final int title_activity_number_mode=0x7f050009;
     }
     public static final class style {

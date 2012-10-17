@@ -20,6 +20,7 @@
         android:layout_below="@+id/textView1"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="40dp"
+        android:onClick="OpenMathMode"
         android:text="@string/math_mode_btn" />
 
     <Button

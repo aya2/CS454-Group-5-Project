@@ -25,6 +25,13 @@ public class GameMenu extends Activity {
     	Intent intent = new Intent(this, NumberMode.class);
     	startActivity(intent);
     }
+    
+    //called when user clicks math mode
+    public void OpenMathMode(View view)
+    {
+    	Intent intent = new Intent(this, MathMode.class);
+    	startActivity(intent);
+    }
 
     
 }
