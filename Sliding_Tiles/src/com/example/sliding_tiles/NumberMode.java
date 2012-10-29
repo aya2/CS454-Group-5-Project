@@ -1,5 +1,9 @@
 	package com.example.sliding_tiles;
 
+//import java.util.Arrays;
+//import java.util.Collections;
+//import java.util.List;
+
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -25,6 +29,7 @@ public class NumberMode extends Activity {
         final AlertDialog.Builder b = new AlertDialog.Builder(this);
        // final TextView textView = new TextView(this);
         gridview.setAdapter(i);
+        i.shuffleArray();
         
         gridview.setOnItemClickListener(new OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
@@ -41,7 +46,7 @@ public class NumberMode extends Activity {
             	   b.setPositiveButton("Yes",new DialogInterface.OnClickListener() {  
             		    public void onClick(DialogInterface dialog, int which) { 
             		        Intent myIntent = new Intent(((Dialog) dialog).getContext(), NumberMode.class);
-            		        startActivity(myIntent);    
+            		        startActivity(myIntent);
             		        return;  
             		        }        
             		    });      

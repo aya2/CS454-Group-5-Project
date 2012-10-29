@@ -1,5 +1,7 @@
 package com.example.sliding_tiles;
 
+import java.util.Random;
+
 import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
@@ -38,11 +40,24 @@ public class ImageAdapter extends BaseAdapter {
         } else {
             imageView = (ImageView) convertView;
         }
+        
+        //shuffleArray();
 
         imageView.setImageResource(mThumbIds[board[position]]);
         return imageView;
     }
     
+    public void shuffleArray(){
+    	Random rnd = new Random();
+        for (int i = 23; i >= 0; i--)
+        {
+          int index = rnd.nextInt(i + 1);
+          // Simple swap
+          int a = board[index];
+          board[index] = board[i];
+          board[i] = a;
+        }
+      }
     
     public void moveBoard(int selected)
 	{
@@ -188,7 +203,7 @@ public class ImageAdapter extends BaseAdapter {
     };
     // references to our images
     public Integer[] board = {
-    		0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,24,23
+    		0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24
  
     };
     
@@ -213,7 +228,7 @@ public class ImageAdapter extends BaseAdapter {
     	}
     	else
     		return 1;
-    	
+
     	return 0;
     	
     }

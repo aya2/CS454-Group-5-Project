@@ -23,6 +23,7 @@ public class PictureMode extends Activity {
         final ImageAdapterPicture i = new ImageAdapterPicture(this);
         final AlertDialog.Builder b = new AlertDialog.Builder(this);
         gridview.setAdapter(i);
+        i.shuffleArray();
         gridview.setOnItemClickListener(new OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
                

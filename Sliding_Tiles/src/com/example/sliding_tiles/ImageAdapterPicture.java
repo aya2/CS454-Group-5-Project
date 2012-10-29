@@ -1,5 +1,7 @@
 package com.example.sliding_tiles;
 
+import java.util.Random;
+
 import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
@@ -178,7 +180,7 @@ public class ImageAdapterPicture extends BaseAdapter {
             R.drawable.picture07, R.drawable.picture08,
             R.drawable.picture09, R.drawable.picture10,
             R.drawable.picture11, R.drawable.picture12,
-            R.drawable.picture03, R.drawable.picture14,
+            R.drawable.picture13, R.drawable.picture14,
             R.drawable.picture15, R.drawable.picture16,
             R.drawable.picture17, R.drawable.picture18,
             R.drawable.picture19, R.drawable.picture20,
@@ -188,7 +190,7 @@ public class ImageAdapterPicture extends BaseAdapter {
     };
     
     public Integer[] board = {
-    		0,1,2,3,11,12,13,14,15,16,4,5,6,7,8,9,10,17,18,19,20,21,22,24,23
+    		0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24
  
     };
     
@@ -217,4 +219,16 @@ public class ImageAdapterPicture extends BaseAdapter {
     	return 0;
     	
     }
+    
+    public void shuffleArray(){
+    	Random rnd = new Random();
+        for (int i = 23; i >= 0; i--)
+        {
+          int index = rnd.nextInt(i + 1);
+          // Simple swap
+          int a = board[index];
+          board[index] = board[i];
+          board[i] = a;
+        }
+      }
 }
