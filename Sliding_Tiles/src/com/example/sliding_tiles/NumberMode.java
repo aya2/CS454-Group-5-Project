@@ -1,11 +1,16 @@
-package com.example.sliding_tiles;
+	package com.example.sliding_tiles;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.GridView;
+//import android.widget.TextView;
 
 
 public class NumberMode extends Activity {
@@ -16,55 +21,61 @@ public class NumberMode extends Activity {
         setContentView(R.layout.activity_number_mode);
         
         final GridView gridview = (GridView) findViewById(R.id.gridview);
-        gridview.setAdapter(new ImageAdapter(this));
         final ImageAdapter i = new ImageAdapter(this);
+        final AlertDialog.Builder b = new AlertDialog.Builder(this);
+       // final TextView textView = new TextView(this);
+        gridview.setAdapter(i);
+        
         gridview.setOnItemClickListener(new OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
                
-               if(0 < position-5 || position-5 == 0) {
-            	   if(i.mThumbIds[position-5]==i.mThumbIdsMain[24]) {
-            		   i.mThumbIdsMain[25]=i.mThumbIds[position-5];
-            		   i.mThumbIds[position-5]=i.mThumbIds[position];
-            		   i.mThumbIds[position]=i.mThumbIdsMain[25];
-            		   
-            	   	}
-               }
-               
-               if(position+5 < 24 || position+5 == 24) {
-            	   if(i.mThumbIds[position+5]==i.mThumbIdsMain[24]) {
-            		   i.mThumbIdsMain[25]=i.mThumbIds[position+5];
-            		   i.mThumbIds[position+5]=i.mThumbIds[position];
-            		   i.mThumbIds[position]=i.mThumbIdsMain[25];
-            		   
-            	   }
-               }
-            	 
-               if( (position != 4) && (position != 9) && (position != 14) && (position != 19) && (position != 24)) {
-	               if( position+1 < 24 || position+1 == 24) {
-	            	   if(i.mThumbIds[position+1]==i.mThumbIdsMain[24]) {
-	            		   i.mThumbIdsMain[25]=i.mThumbIds[position+1];
-	            		   i.mThumbIds[position+1]=i.mThumbIds[position];
-	            		   i.mThumbIds[position]=i.mThumbIdsMain[25];
-	            		   
-	            	   }
-	               }
-               }
-               
-               if( position != 0 && position != 5 && position != 10 && position != 15 && position != 20) {
-	               if(0 < position-1 || position-1 == 0) {
-	            	   if(i.mThumbIds[position-1]==i.mThumbIdsMain[24]) {
-	            		   i.mThumbIdsMain[25]=i.mThumbIds[position-1];
-	            		   i.mThumbIds[position-1]=i.mThumbIds[position];
-	            		   i.mThumbIds[position]=i.mThumbIdsMain[25];
-	            		  
-            	   }
-	            }
-            }
-               
+            	
+               i.moveBoard(position);
+               int result = i.checkGameOver();
+               if (result==0){
+                   
+        		   //display game over
+            	   b.setIcon(android.R.drawable.ic_dialog_alert);
+            	   b.setTitle("GOOD WORK! GAME OVER!!!");
+            	   b.setMessage("Do you want to play again?");
+            	   b.setPositiveButton("Yes",new DialogInterface.OnClickListener() {  
+            		    public void onClick(DialogInterface dialog, int which) { 
+            		        Intent myIntent = new Intent(((Dialog) dialog).getContext(), NumberMode.class);
+            		        startActivity(myIntent);    
+            		        return;  
+            		        }        
+            		    });      
+            	   b.setNegativeButton("No", new DialogInterface.OnClickListener() {  
+            		    public void onClick(DialogInterface dialog, int which) { 
+            		        Intent myIntent = new Intent(((Dialog) dialog).getContext(), GameMenu.class);
+            		        startActivity(myIntent);    
+            		        return;  
+            		        }        
+            		    });      
+            	   b.show();
+        		   //Context context = getApplicationContext();
+        		   //CharSequence text = "Game Over";
+        		   //int duration = Toast.LENGTH_SHORT;
+
+        		   //Toast toast = Toast.makeText(context, text, duration);
+        		   //toast.show();
+        		   /*try {
+   					Thread.sleep(5000);
+   					} 
+        		   catch (InterruptedException e) {
+   					// TODO Auto-generated catch block
+   					e.printStackTrace();
+   					
+   				}*/
+        		   //finish();
+        		   
+        	   }
+              
                i.notifyDataSetChanged();
-               gridview.setAdapter(i);
-               gridview.invalidateViews();   
-            }
+               
+         }
+
+           
         });
         
     }
