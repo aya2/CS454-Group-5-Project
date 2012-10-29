@@ -1,3 +1,5 @@
+// Sliding Tiles Game
+
 package com.example.sliding_tiles;
 
 import android.app.Activity;
