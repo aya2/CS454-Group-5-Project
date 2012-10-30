@@ -20,6 +20,7 @@ public class PictureMode2x2 extends Activity {
             final ImageAdapter2x2 i = new ImageAdapter2x2(this);
             final AlertDialog.Builder b = new AlertDialog.Builder(this);
             gridview.setAdapter(i);
+            i.shuffleArray();
             
             ImageView image = (ImageView) findViewById(R.id.test_image);
             image.setImageResource(R.drawable.soccerballfinished1);
