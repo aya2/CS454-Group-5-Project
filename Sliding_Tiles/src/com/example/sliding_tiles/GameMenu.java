@@ -37,7 +37,7 @@ public class GameMenu extends Activity {
     
     public void OpenPictureMode(View view)
     {
-    	Intent intent = new Intent(this, PictureMode.class);
+    	Intent intent = new Intent(this, PicModeMenu.class);
     	startActivity(intent);
     }
     
