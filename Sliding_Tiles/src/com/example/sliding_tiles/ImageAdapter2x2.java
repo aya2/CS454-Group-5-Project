@@ -180,7 +180,7 @@ public class ImageAdapter2x2 extends BaseAdapter {
             R.drawable.soccerball1, R.drawable.soccerball2,
             R.drawable.transparent, R.drawable.transparent,
             R.drawable.transparent, R.drawable.soccerball3,
-            R.drawable.soccerballempty, R.drawable.transparent,
+            R.drawable.pictureempty, R.drawable.transparent,
             R.drawable.transparent, R.drawable.transparent,
             R.drawable.transparent, R.drawable.transparent,
             R.drawable.transparent, R.drawable.transparent,

@@ -174,18 +174,18 @@ public class ImageAdapterPicture extends BaseAdapter {
 	}
  // references to our images
     public Integer[] mThumbIds = {
-            R.drawable.picture01, R.drawable.picture02,
-            R.drawable.picture03, R.drawable.picture04,
-            R.drawable.picture05, R.drawable.picture06,
-            R.drawable.picture07, R.drawable.picture08,
-            R.drawable.picture09, R.drawable.picture10,
-            R.drawable.picture11, R.drawable.picture12,
-            R.drawable.picture13, R.drawable.picture14,
-            R.drawable.picture15, R.drawable.picture16,
-            R.drawable.picture17, R.drawable.picture18,
-            R.drawable.picture19, R.drawable.picture20,
-            R.drawable.picture21, R.drawable.picture22,
-            R.drawable.picture23, R.drawable.picture24,
+            R.drawable.guineapig1, R.drawable.guineapig2,
+            R.drawable.guineapig3, R.drawable.guineapig4,
+            R.drawable.guineapig5, R.drawable.guineapig6,
+            R.drawable.guineapig7, R.drawable.guineapig8,
+            R.drawable.guineapig9, R.drawable.guineapig10,
+            R.drawable.guineapig11, R.drawable.guineapig12,
+            R.drawable.guineapig13, R.drawable.guineapig14,
+            R.drawable.guineapig15, R.drawable.guineapig16,
+            R.drawable.guineapig17, R.drawable.guineapig18,
+            R.drawable.guineapig19, R.drawable.guineapig20,
+            R.drawable.guineapig21, R.drawable.guineapig22,
+            R.drawable.guineapig23, R.drawable.guineapig24,
             R.drawable.pictureempty,
     };
     

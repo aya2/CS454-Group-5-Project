@@ -3,13 +3,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:padding="@dimen/padding_medium"
-        android:text="@string/hello_world"
-        tools:context=".PictureMode3x3" />
+<GridView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/gridview"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:columnWidth="90dp"
+    android:gravity="center"
+    android:horizontalSpacing="500dp"
+    android:numColumns="5"
+    android:stretchMode="spacingWidth"
+    android:verticalSpacing="-1px" />
+    
+<ImageView 
+   android:id="@+id/test_image"
+   android:layout_width="90dip"
+   android:layout_height="90dip"
+   android:layout_alignParentRight="true"
+   android:layout_alignParentBottom="true"
+   />
+
 
 </RelativeLayout>

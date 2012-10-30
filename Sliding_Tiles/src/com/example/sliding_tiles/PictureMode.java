@@ -56,7 +56,7 @@ public class PictureMode extends Activity {
             }
         });
         ImageView image = (ImageView) findViewById(R.id.test_image);
-        image.setImageResource(R.drawable.picturefinished);
+        image.setImageResource(R.drawable.guineapigfinished1);
     }
 
  

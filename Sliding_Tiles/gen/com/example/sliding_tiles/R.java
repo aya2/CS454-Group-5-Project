@@ -33,8 +33,8 @@ public final class R {
         public static final int car8=0x7f02000e;
         public static final int car9=0x7f02000f;
         public static final int car_finished=0x7f020010;
-        public static final int car_finished1=0x7f020011;
-        public static final int carempty1=0x7f020012;
+        public static final int carempty1=0x7f020011;
+        public static final int carfinished1=0x7f020012;
         public static final int guineapig=0x7f020013;
         public static final int guineapig1=0x7f020014;
         public static final int guineapig10=0x7f020015;
@@ -62,7 +62,7 @@ public final class R {
         public static final int guineapig9=0x7f02002b;
         public static final int guineapig_empty=0x7f02002c;
         public static final int guineapig_finished=0x7f02002d;
-        public static final int guineapig_finished1=0x7f02002e;
+        public static final int guineapigfinished1=0x7f02002e;
         public static final int ic_action_search=0x7f02002f;
         public static final int ic_launcher=0x7f020030;
         public static final int picture01=0x7f020031;
@@ -96,8 +96,8 @@ public final class R {
         public static final int soccerball3=0x7f02004d;
         public static final int soccerball_empty1=0x7f02004e;
         public static final int soccerball_finished=0x7f02004f;
-        public static final int soccerball_finished1=0x7f020050;
-        public static final int soccerballempty=0x7f020051;
+        public static final int soccerballempty=0x7f020050;
+        public static final int soccerballfinished1=0x7f020051;
         public static final int teddybear=0x7f020052;
         public static final int teddybear1=0x7f020053;
         public static final int teddybear2=0x7f020054;
@@ -109,7 +109,7 @@ public final class R {
         public static final int teddybear8=0x7f02005a;
         public static final int teddybear_empty=0x7f02005b;
         public static final int teddybear_finished=0x7f02005c;
-        public static final int teddybear_finished1=0x7f02005d;
+        public static final int teddybearfinished1=0x7f02005d;
         public static final int tile1=0x7f02005e;
         public static final int tile10=0x7f02005f;
         public static final int tile11=0x7f020060;
