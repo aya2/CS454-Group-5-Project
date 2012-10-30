@@ -222,7 +222,7 @@ public class ImageAdapterPicture extends BaseAdapter {
     
     public void shuffleArray(){
     	Random rnd = new Random();
-        for (int i = 23; i >= 0; i--)
+        for (int i = 24; i >= 0; i--)
         {
           int index = rnd.nextInt(i + 1);
           // Simple swap

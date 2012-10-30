@@ -8,5 +8,5 @@
 	    android:horizontalSpacing="500dp"
 	    android:stretchMode="spacingWidth"
 	    android:gravity="center"
-	  
+	    
 	/>

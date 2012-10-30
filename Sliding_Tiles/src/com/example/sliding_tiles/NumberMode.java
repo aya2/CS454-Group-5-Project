@@ -41,7 +41,7 @@ public class NumberMode extends Activity {
                    
         		   //display game over
             	   b.setIcon(android.R.drawable.ic_dialog_alert);
-            	   b.setTitle("GOOD WORK! GAME OVER!!!");
+            	   b.setTitle("YOU WIN!");
             	   b.setMessage("Do you want to play again?");
             	   b.setPositiveButton("Yes",new DialogInterface.OnClickListener() {  
             		    public void onClick(DialogInterface dialog, int which) { 
