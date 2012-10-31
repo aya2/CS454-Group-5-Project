@@ -174,23 +174,23 @@ public class ImageAdapterPicture extends BaseAdapter {
 	}
  // references to our images
     public Integer[] mThumbIds = {
-            R.drawable.picture01, R.drawable.picture02,
-            R.drawable.picture03, R.drawable.picture04,
-            R.drawable.picture05, R.drawable.picture06,
-            R.drawable.picture07, R.drawable.picture08,
-            R.drawable.picture09, R.drawable.picture10,
-            R.drawable.picture11, R.drawable.picture12,
-            R.drawable.picture13, R.drawable.picture14,
-            R.drawable.picture15, R.drawable.picture16,
-            R.drawable.picture17, R.drawable.picture18,
-            R.drawable.picture19, R.drawable.picture20,
-            R.drawable.picture21, R.drawable.picture22,
-            R.drawable.picture23, R.drawable.picture24,
+            R.drawable.guineapig1, R.drawable.guineapig2,
+            R.drawable.guineapig3, R.drawable.guineapig4,
+            R.drawable.guineapig5, R.drawable.guineapig6,
+            R.drawable.guineapig7, R.drawable.guineapig8,
+            R.drawable.guineapig9, R.drawable.guineapig10,
+            R.drawable.guineapig11, R.drawable.guineapig12,
+            R.drawable.guineapig13, R.drawable.guineapig14,
+            R.drawable.guineapig15, R.drawable.guineapig16,
+            R.drawable.guineapig17, R.drawable.guineapig18,
+            R.drawable.guineapig19, R.drawable.guineapig20,
+            R.drawable.guineapig21, R.drawable.guineapig22,
+            R.drawable.guineapig23, R.drawable.guineapig24,
             R.drawable.pictureempty,
     };
     
     public Integer[] board = {
-    		0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24
+    		0,1,2,3,4,5,6,7,8,9,10,11,24,12,13,14,15,16,17,18,19,20,21,22,23
  
     };
     
@@ -222,13 +222,16 @@ public class ImageAdapterPicture extends BaseAdapter {
     
     public void shuffleArray(){
     	Random rnd = new Random();
-        for (int i = 24; i >= 0; i--)
+        for (int i = 50; i >= 0; i--)
         {
-          int index = rnd.nextInt(i + 1);
-          // Simple swap
-          int a = board[index];
-          board[index] = board[i];
-          board[i] = a;
+          int index = rnd.nextInt(4);
+          int blank = findBlank();
+          moveBoard(blank-index);
+          moveBoard(blank+index);
+          moveBoard(blank+index);
+          moveBoard(blank+5);
+          moveBoard(blank-5);
+            //moveBoard(blank+index);
         }
       }
 }

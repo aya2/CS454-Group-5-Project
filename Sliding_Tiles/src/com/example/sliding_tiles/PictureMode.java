@@ -24,6 +24,7 @@ public class PictureMode extends Activity {
         final AlertDialog.Builder b = new AlertDialog.Builder(this);
         gridview.setAdapter(i);
         i.shuffleArray();
+        
         gridview.setOnItemClickListener(new OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
                
@@ -56,7 +57,7 @@ public class PictureMode extends Activity {
             }
         });
         ImageView image = (ImageView) findViewById(R.id.test_image);
-        image.setImageResource(R.drawable.picturefinished);
+        image.setImageResource(R.drawable.guineapigfinished1);
     }
 
  
