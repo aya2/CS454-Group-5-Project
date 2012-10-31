@@ -57,6 +57,10 @@ public class ImageAdapterNumber2x2 extends BaseAdapter {
 		//check if selected is in one of the 4 legal positions in relation to the blank to allow the switch
 		int blankLocation = findBlank();
 		
+		if(selected+1 == blankLocation || selected-1 == blankLocation || selected+5 == blankLocation ||selected-5 == blankLocation){
+			swap(blankLocation,selected);
+		}
+		/*
 		//check if selected is special boundary case and deal with accordingly
 		if(selected == 5 || selected == 10 || selected == 15 || selected == 20)//selected along left edge
 		{
@@ -152,13 +156,13 @@ public class ImageAdapterNumber2x2 extends BaseAdapter {
 			swap(selected+15,selected+10);
 			swap(selected+10,selected+5);
 			swap(selected+5,selected);
-		}
+		}*/
 	}
     
     public void swap(int blank, int selected){
     	
     	int temp = board[selected];
-		board[selected] = 24;
+		board[selected] = 12;
 		board[blank] = temp;
     }
 	
@@ -166,7 +170,7 @@ public class ImageAdapterNumber2x2 extends BaseAdapter {
 	{
 		for(int i = 0;i < board.length;i++)
 		{
-			if(board[i] == 24)
+			if(board[i] == 12)
 				return i;
 		}
 		
@@ -190,7 +194,7 @@ public class ImageAdapterNumber2x2 extends BaseAdapter {
     };
     
     public Integer[] board = {
-    		0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24
+    		0,1,2,3,4,5,6,7,8,9,10,12,11,13,14,15,16,17,18,19,20,21,22,23,24
  
     };
     

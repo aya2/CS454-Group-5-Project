@@ -3,10 +3,16 @@ package com.example.sliding_tiles;
 import android.os.Bundle;
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.Dialog;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.ImageView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.support.v4.app.NavUtils;
 
 public class NumberMode2x2 extends Activity {
@@ -22,8 +28,38 @@ public class NumberMode2x2 extends Activity {
             gridview.setAdapter(i);
             i.shuffleArray();
             
-            //ImageView image = (ImageView) findViewById(R.id.test_image);
-            //image.setImageResource(R.drawable.soccerballfinished1);
+            //i.shuffleArray();
+            gridview.setOnItemClickListener(new OnItemClickListener() {
+                public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
+                   
+                	i.moveBoard(position);
+                    int result = i.checkGameOver();
+                    if (result==0){
+             		   //display game over
+                    
+                    	 b.setIcon(android.R.drawable.ic_dialog_alert);
+                  	   b.setTitle("YOU WIN!");
+                  	   b.setMessage("Do you want to play again?");
+                  	   b.setPositiveButton("Yes",new DialogInterface.OnClickListener() {  
+                  		    public void onClick(DialogInterface dialog, int which) { 
+                  		        Intent myIntent = new Intent(((Dialog) dialog).getContext(), NumberMode2x2.class);
+                  		        startActivity(myIntent);    
+                  		        return;  
+                  		        }        
+                  		    });      
+                  	   b.setNegativeButton("No", new DialogInterface.OnClickListener() {  
+                  		    public void onClick(DialogInterface dialog, int which) { 
+                  		        Intent myIntent = new Intent(((Dialog) dialog).getContext(), GameMenu.class);
+                  		        startActivity(myIntent);    
+                  		        return;  
+                  		        }        
+                  		    });      
+                  	   b.show();
+             	   }
+                   
+                   i.notifyDataSetChanged();   
+                }
+            });
     }
 
     @Override
