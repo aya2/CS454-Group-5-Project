@@ -42,7 +42,7 @@ public class PicModeMenu extends Activity {
     		Intent intent = new Intent(this, PictureMode4x4.class);
     		startActivity(intent);
     	}
-    	else{
+    	else if (R.id.radio3 == selected){
     		Intent intent = new Intent(this, PictureMode.class);
     		startActivity(intent);
     	}

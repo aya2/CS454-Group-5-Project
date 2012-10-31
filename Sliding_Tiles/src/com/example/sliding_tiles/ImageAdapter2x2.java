@@ -236,7 +236,7 @@ public class ImageAdapter2x2 extends BaseAdapter {
         				board[i - 1] = a;
         				swapped = true;
         			}
-        			else index = rnd.nextInt(14);
+        			else index = rnd.nextInt(9) + 5;
         		}
         	}
         }

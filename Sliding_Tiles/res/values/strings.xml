@@ -22,5 +22,9 @@
     <string name="title_activity_picture_mode2x2">PictureMode2x2</string>
     <string name="title_activity_picture_mode3x3">PictureMode3x3</string>
     <string name="title_activity_picture_mode4x4">PictureMode4x4</string>
+    <string name="title_activity_number_mode_menu">NumberModeMenu</string>
+    <string name="title_activity_number_mode2x2">NumberMode2x2</string>
+    <string name="title_activity_number_mode3x3">NumberMode3x3</string>
+    <string name="title_activity_number_mode4x4">NumberMode4x4</string>
 
 </resources>

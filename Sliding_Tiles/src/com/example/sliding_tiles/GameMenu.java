@@ -24,7 +24,7 @@ public class GameMenu extends Activity {
     
     /*Called when user clicks Number Button*/
     public void OpenNumberMode(View view) {
-    	Intent intent = new Intent(this, NumberMode.class);
+    	Intent intent = new Intent(this, NumberModeMenu.class);
     	startActivity(intent);
     }
     
