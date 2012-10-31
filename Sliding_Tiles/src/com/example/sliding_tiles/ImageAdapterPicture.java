@@ -190,7 +190,7 @@ public class ImageAdapterPicture extends BaseAdapter {
     };
     
     public Integer[] board = {
-    		0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24
+    		0,1,2,3,4,5,6,7,8,9,10,11,24,12,13,14,15,16,17,18,19,20,21,22,23
  
     };
     
@@ -222,13 +222,18 @@ public class ImageAdapterPicture extends BaseAdapter {
     
     public void shuffleArray(){
     	Random rnd = new Random();
-        for (int i = 23; i >= 0; i--)
+        for (int i = 5; i >= 0; i--)
         {
-          int index = rnd.nextInt(i + 1);
-          // Simple swap
-          int a = board[index];
-          board[index] = board[i];
-          board[i] = a;
+          int index = rnd.nextInt(4);
+          int blank = findBlank();
+          moveBoard(blank-index);
+          moveBoard(blank+index);
+          moveBoard(blank+5);
+          moveBoard(blank-5);
+          //moveBoard(blank+index);
+          //moveBoard(blank+5);
+          //moveBoard(blank-5);
+            //moveBoard(blank+index);
         }
       }
 }

@@ -34,7 +34,7 @@ public class ImageAdapter extends BaseAdapter {
         ImageView imageView;
         if (convertView == null) {  // if it's not recycled, initialize some attributes
             imageView = new ImageView(mContext);
-            imageView.setLayoutParams(new GridView.LayoutParams(85, 85));
+            imageView.setLayoutParams(new GridView.LayoutParams(90, 90));
             imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
             imageView.setPadding(0, 0, 0, 0);
         } else {
@@ -49,13 +49,23 @@ public class ImageAdapter extends BaseAdapter {
     
     public void shuffleArray(){
     	Random rnd = new Random();
-        for (int i = 23; i >= 0; i--)
+        for (int i = 50; i >= 0; i--)
         {
-          int index = rnd.nextInt(i + 1);
+          int index = rnd.nextInt(4);
+          int blank = findBlank();
+          moveBoard(blank-index);
+          moveBoard(blank+index);
+          moveBoard(blank+index);
+          moveBoard(blank+5);
+          moveBoard(blank-5);
+          //moveBoard(index);
+          //moveBoard(blank+5);
+     
+          //moveBoard(blank+1);
           // Simple swap
-          int a = board[index];
-          board[index] = board[i];
-          board[i] = a;
+          //int a = board[index];
+          //board[index] = board[i];
+          //board[i] = a;
         }
       }
     
@@ -203,20 +213,24 @@ public class ImageAdapter extends BaseAdapter {
     };
     // references to our images
     public Integer[] board = {
+    		0,1,2,3,4,5,6,7,8,9,10,11,24,12,13,14,15,16,17,18,19,20,21,22,23,
+ 
+    };
+    
+    public Integer[] boardRefOne = {
     		0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24
  
     };
     
-    public Integer[] boardRef = {
-    		0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24
+    public Integer[] boardRefTwo = {
+    		24,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23
  
     };
-    
     public int checkGameOver(){
     	int i;
     	if(board[0]==0){
     		for(i=0;i<25;i++){
-        		if(mThumbIds[board[i]]==mThumbIds[boardRef[i]]){
+        		if(mThumbIds[board[i]]==mThumbIds[boardRefOne[i]] || mThumbIds[board[i]]==mThumbIds[boardRefTwo[i]] ){
         			
         		}
         		else
