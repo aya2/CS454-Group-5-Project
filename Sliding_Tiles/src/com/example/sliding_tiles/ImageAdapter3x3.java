@@ -112,10 +112,8 @@ public class ImageAdapter3x3 extends BaseAdapter {
 		}
 		
 		if(blankLocation == selected+2){
-			
 			swap(blankLocation,selected+1);
 			swap(selected+1,selected);
-			
 		}
 		
 		if(blankLocation == selected+10){

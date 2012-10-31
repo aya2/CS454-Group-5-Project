@@ -222,15 +222,17 @@ public class ImageAdapterPicture extends BaseAdapter {
     
     public void shuffleArray(){
     	Random rnd = new Random();
-        for (int i = 50; i >= 0; i--)
+        for (int i = 5; i >= 0; i--)
         {
           int index = rnd.nextInt(4);
           int blank = findBlank();
           moveBoard(blank-index);
           moveBoard(blank+index);
-          moveBoard(blank+index);
           moveBoard(blank+5);
           moveBoard(blank-5);
+          //moveBoard(blank+index);
+          //moveBoard(blank+5);
+          //moveBoard(blank-5);
             //moveBoard(blank+index);
         }
       }
