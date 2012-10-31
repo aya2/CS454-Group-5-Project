@@ -42,74 +42,43 @@
         <activity
             android:name=".PicModeMenu"
             android:label="@string/title_activity_pic_mode_menu" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            
         </activity>
         <activity
             android:name=".PictureMode2x2"
             android:label="@string/title_activity_picture_mode2x2" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+           
         </activity>
         <activity
             android:name=".PictureMode3x3"
             android:label="@string/title_activity_picture_mode3x3" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+           
         </activity>
         <activity
             android:name=".PictureMode4x4"
             android:label="@string/title_activity_picture_mode4x4" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+           
         </activity>
         <activity
             android:name=".NumberModeMenu"
             android:label="@string/title_activity_number_mode_menu" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            
         </activity>
         <activity
             android:name=".NumberMode2x2"
             android:label="@string/title_activity_number_mode2x2" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            
         </activity>
         <activity
             android:name=".NumberMode3x3"
             android:label="@string/title_activity_number_mode3x3" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".NumberMode4x4"
             android:label="@string/title_activity_number_mode4x4" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            
         </activity>
     </application>
 
