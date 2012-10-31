@@ -26,6 +26,7 @@ public class PictureMode2x2 extends Activity {
             final ImageAdapter2x2 i = new ImageAdapter2x2(this);
             final AlertDialog.Builder b = new AlertDialog.Builder(this);
             gridview.setAdapter(i);
+            i.shuffleArray();
             
             //i.shuffleArray();
             gridview.setOnItemClickListener(new OnItemClickListener() {

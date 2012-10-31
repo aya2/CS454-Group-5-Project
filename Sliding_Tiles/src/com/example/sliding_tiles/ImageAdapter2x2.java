@@ -226,13 +226,23 @@ public class ImageAdapter2x2 extends BaseAdapter {
     
     public void shuffleArray(){
     	Random rnd = new Random();
-        for (int i = 23; i >= 0; i--)
-        {
-          int index = rnd.nextInt(i + 1);
-          // Simple swap
-          int a = board[index];
-          board[index] = board[i];
-          board[i] = a;
+    	
+        for (int i = 23; i > 0; i--)       	
+        { 
+        	if (i == 7 || i == 8 || i == 12 || i == 13){
+        		int index = rnd.nextInt(9) + 5;
+        		boolean swapped = false;
+        		while (swapped == false){
+        			if (index == 7 || index == 8 || index == 12 || index == 13){
+        				// Simple swap
+        				int a = board[index - 1];
+        				board[index - 1] = board[i - 1];
+        				board[i - 1] = a;
+        				swapped = true;
+        			}
+        			else index = rnd.nextInt(14);
+        		}
+        	}
         }
       }
 }
