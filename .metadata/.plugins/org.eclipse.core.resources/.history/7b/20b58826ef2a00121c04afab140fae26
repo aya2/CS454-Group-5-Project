@@ -1,0 +1,31 @@
+<resources>
+
+    <string name="app_name">Sliding_Tiles</string>
+    <string name="choose_game">Choose your game!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_game_menu">Sliding Tiles</string>
+    <string name="math_mode_btn">Math Mode</string>
+    <string name="num_mode_btn">Number Mode</string>
+    <string name="pic_mode_btn">Picture Mode</string>
+    <string name="instructions_btn">Instructions</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_number_mode">NumberMode</string>
+    <string name="title_activity_math_mode">MathMode</string>
+    <string name="title_activity_picture_mode">PictureMode</string>
+    <string name="title_activity_instructions">Instructions</string>
+    <string name="title_activity_pic_mode_menu">PicModeMenu</string>
+    <string name="size_choice2x2">2x2</string>
+    <string name="size_choice3x3">3x3</string>
+    <string name="size_choice4x4">4x4</string>
+    <string name="size_choice5x5">5x5</string>
+    <string name="start_game_btn">Start Game!</string>
+    <string name="title_activity_picture_mode2x2">PictureMode2x2</string>
+    <string name="title_activity_picture_mode3x3">PictureMode3x3</string>
+    <string name="title_activity_picture_mode4x4">PictureMode4x4</string>
+    <string name="title_activity_number_mode_menu">NumberModeMenu</string>
+    <string name="title_activity_number_mode2x2">NumberMode2x2</string>
+    <string name="title_activity_number_mode3x3">NumberMode3x3</string>
+    <string name="title_activity_number_mode4x4">NumberMode4x4</string>
+    <string name="title_activity_preferences">Preferences</string>
+
+</resources>
