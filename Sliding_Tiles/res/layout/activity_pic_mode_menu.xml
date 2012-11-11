@@ -39,15 +39,7 @@
             android:text="@string/size_choice5x5" />
     </RadioGroup>
 
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/radioGroup1"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="118dp"
-        android:text="@string/start_game_btn"
-        android:onClick="PicModeStartGame" />
+
 
 
 </RelativeLayout>

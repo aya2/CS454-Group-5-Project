@@ -9,13 +9,25 @@ import android.view.View;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.support.v4.app.NavUtils;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
 
 public class PicModeMenu extends Activity {
+	private SharedPreferences prefer;
+	private SharedPreferences.Editor editor;
+	
 	
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pic_mode_menu);
+        prefer = getSharedPreferences("preference", MODE_PRIVATE);
+        editor = prefer.edit();
+    	editor.putInt("PicModeSize", 3); //default the picture mode size to 5x5
+    	editor.putInt("NumModeSize", 7); //default the number mode size to 5x5
+    	editor.putInt("picAI", 0); //default the picture mode AI to off
+    	editor.putInt("numAI", 0); //default the number mode AI to off
+    	editor.commit(); //save changes
     }
 
     @Override
@@ -26,8 +38,10 @@ public class PicModeMenu extends Activity {
 
     public void PicModeStartGame(View view) {
     	//get checked radio button
-    	RadioGroup sizes = (RadioGroup) findViewById(R.id.radioGroup1);
-    	int selected = sizes.getCheckedRadioButtonId();
+    	//RadioGroup sizes = (RadioGroup) findViewById(R.id.radioGroup1);
+    	//int selected = sizes.getCheckedRadioButtonId();
+    	prefer = getSharedPreferences("preference", MODE_PRIVATE);
+    	int selected = prefer.getInt("PicModeSize", 0);
     	
     	//Open different size games depending on radio button selected
     	if (R.id.radio0 == selected){

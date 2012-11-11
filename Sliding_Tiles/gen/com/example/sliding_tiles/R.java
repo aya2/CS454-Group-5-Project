@@ -11,9 +11,9 @@ public final class R {
     public static final class attr {
     }
     public static final class dimen {
-        public static final int padding_large=0x7f040002;
-        public static final int padding_medium=0x7f040001;
-        public static final int padding_small=0x7f040000;
+        public static final int padding_large=0x7f050002;
+        public static final int padding_medium=0x7f050001;
+        public static final int padding_small=0x7f050000;
     }
     public static final class drawable {
         public static final int bg=0x7f020000;
@@ -145,27 +145,38 @@ public final class R {
         public static final int transparent=0x7f02007e;
     }
     public static final class id {
-        public static final int MathModeBtn=0x7f080001;
-        public static final int NumModeBtn=0x7f080002;
-        public static final int PicModeBtn=0x7f080003;
-        public static final int button1=0x7f080004;
-        public static final int buttonStartNumGame=0x7f08000e;
-        public static final int gridView1=0x7f080005;
-        public static final int gridview=0x7f080007;
-        public static final int menu_settings=0x7f080014;
-        public static final int radio0=0x7f080010;
-        public static final int radio1=0x7f080011;
-        public static final int radio2=0x7f080012;
-        public static final int radio3=0x7f080013;
-        public static final int radio4=0x7f08000a;
-        public static final int radio5=0x7f08000b;
-        public static final int radio6=0x7f08000c;
-        public static final int radio7=0x7f08000d;
-        public static final int radioGroup1=0x7f08000f;
-        public static final int radioGroup2=0x7f080009;
-        public static final int test_image=0x7f080008;
-        public static final int textView1=0x7f080000;
-        public static final int textView2=0x7f080006;
+        public static final int MathModeBtn=0x7f090001;
+        public static final int NumModeBtn=0x7f090002;
+        public static final int PicModeBtn=0x7f090003;
+        public static final int RadioButton01=0x7f09001e;
+        public static final int RadioButton02=0x7f09001d;
+        public static final int RadioGroup01=0x7f090016;
+        public static final int RadioGroup02=0x7f090018;
+        public static final int RadioGroup03=0x7f09001c;
+        public static final int TextView01=0x7f090017;
+        public static final int button1=0x7f090004;
+        public static final int gridView1=0x7f090006;
+        public static final int gridview=0x7f090008;
+        public static final int menu_settings=0x7f09001f;
+        public static final int pref=0x7f090005;
+        public static final int radio0=0x7f090010;
+        public static final int radio1=0x7f090011;
+        public static final int radio2=0x7f090012;
+        public static final int radio3=0x7f090013;
+        public static final int radio4=0x7f09000b;
+        public static final int radio5=0x7f09000c;
+        public static final int radio6=0x7f09000d;
+        public static final int radio7=0x7f09000e;
+        public static final int radioGroup1=0x7f09000f;
+        public static final int radioGroup2=0x7f09000a;
+        public static final int radioOff=0x7f09001a;
+        public static final int radioOn=0x7f090019;
+        public static final int test_image=0x7f090009;
+        public static final int textView1=0x7f090000;
+        public static final int textView2=0x7f090007;
+        public static final int textView3=0x7f090014;
+        public static final int textView4=0x7f090015;
+        public static final int textView5=0x7f09001b;
     }
     public static final class layout {
         public static final int activity_game_menu=0x7f030000;
@@ -181,50 +192,56 @@ public final class R {
         public static final int activity_picture_mode2x2=0x7f03000a;
         public static final int activity_picture_mode3x3=0x7f03000b;
         public static final int activity_picture_mode4x4=0x7f03000c;
+        public static final int activity_preferences=0x7f03000d;
     }
     public static final class menu {
-        public static final int activity_game_menu=0x7f070000;
-        public static final int activity_instructions=0x7f070001;
-        public static final int activity_math_mode=0x7f070002;
-        public static final int activity_number_mode=0x7f070003;
-        public static final int activity_number_mode2x2=0x7f070004;
-        public static final int activity_number_mode3x3=0x7f070005;
-        public static final int activity_number_mode4x4=0x7f070006;
-        public static final int activity_number_mode_menu=0x7f070007;
-        public static final int activity_pic_mode_menu=0x7f070008;
-        public static final int activity_picture_mode2x2=0x7f070009;
-        public static final int activity_picture_mode3x3=0x7f07000a;
-        public static final int activity_picture_mode4x4=0x7f07000b;
+        public static final int activity_game_menu=0x7f080000;
+        public static final int activity_instructions=0x7f080001;
+        public static final int activity_math_mode=0x7f080002;
+        public static final int activity_number_mode=0x7f080003;
+        public static final int activity_number_mode2x2=0x7f080004;
+        public static final int activity_number_mode3x3=0x7f080005;
+        public static final int activity_number_mode4x4=0x7f080006;
+        public static final int activity_number_mode_menu=0x7f080007;
+        public static final int activity_pic_mode_menu=0x7f080008;
+        public static final int activity_picture_mode2x2=0x7f080009;
+        public static final int activity_picture_mode3x3=0x7f08000a;
+        public static final int activity_picture_mode4x4=0x7f08000b;
+        public static final int activity_preferences=0x7f08000c;
     }
     public static final class string {
-        public static final int app_name=0x7f050000;
-        public static final int choose_game=0x7f050001;
-        public static final int hello_world=0x7f050008;
-        public static final int instructions_btn=0x7f050007;
-        public static final int math_mode_btn=0x7f050004;
-        public static final int menu_settings=0x7f050002;
-        public static final int num_mode_btn=0x7f050005;
-        public static final int pic_mode_btn=0x7f050006;
-        public static final int size_choice2x2=0x7f05000e;
-        public static final int size_choice3x3=0x7f05000f;
-        public static final int size_choice4x4=0x7f050010;
-        public static final int size_choice5x5=0x7f050011;
-        public static final int start_game_btn=0x7f050012;
-        public static final int title_activity_game_menu=0x7f050003;
-        public static final int title_activity_instructions=0x7f05000c;
-        public static final int title_activity_math_mode=0x7f05000a;
-        public static final int title_activity_number_mode=0x7f050009;
-        public static final int title_activity_number_mode2x2=0x7f050017;
-        public static final int title_activity_number_mode3x3=0x7f050018;
-        public static final int title_activity_number_mode4x4=0x7f050019;
-        public static final int title_activity_number_mode_menu=0x7f050016;
-        public static final int title_activity_pic_mode_menu=0x7f05000d;
-        public static final int title_activity_picture_mode=0x7f05000b;
-        public static final int title_activity_picture_mode2x2=0x7f050013;
-        public static final int title_activity_picture_mode3x3=0x7f050014;
-        public static final int title_activity_picture_mode4x4=0x7f050015;
+        public static final int app_name=0x7f060000;
+        public static final int choose_game=0x7f060001;
+        public static final int hello_world=0x7f060008;
+        public static final int instructions_btn=0x7f060007;
+        public static final int math_mode_btn=0x7f060004;
+        public static final int menu_settings=0x7f060002;
+        public static final int num_mode_btn=0x7f060005;
+        public static final int pic_mode_btn=0x7f060006;
+        public static final int savePref=0x7f06001a;
+        public static final int size_choice2x2=0x7f06000e;
+        public static final int size_choice3x3=0x7f06000f;
+        public static final int size_choice4x4=0x7f060010;
+        public static final int size_choice5x5=0x7f060011;
+        public static final int title_activity_game_menu=0x7f060003;
+        public static final int title_activity_instructions=0x7f06000c;
+        public static final int title_activity_math_mode=0x7f06000a;
+        public static final int title_activity_number_mode=0x7f060009;
+        public static final int title_activity_number_mode2x2=0x7f060016;
+        public static final int title_activity_number_mode3x3=0x7f060017;
+        public static final int title_activity_number_mode4x4=0x7f060018;
+        public static final int title_activity_number_mode_menu=0x7f060015;
+        public static final int title_activity_pic_mode_menu=0x7f06000d;
+        public static final int title_activity_picture_mode=0x7f06000b;
+        public static final int title_activity_picture_mode2x2=0x7f060012;
+        public static final int title_activity_picture_mode3x3=0x7f060013;
+        public static final int title_activity_picture_mode4x4=0x7f060014;
+        public static final int title_activity_preferences=0x7f060019;
     }
     public static final class style {
-        public static final int AppTheme=0x7f060000;
+        public static final int AppTheme=0x7f070000;
+    }
+    public static final class xml {
+        public static final int preference=0x7f040000;
     }
 }
