@@ -18,7 +18,6 @@
     <string name="size_choice3x3">3x3</string>
     <string name="size_choice4x4">4x4</string>
     <string name="size_choice5x5">5x5</string>
-    <string name="start_game_btn">Start Game!</string>
     <string name="title_activity_picture_mode2x2">PictureMode2x2</string>
     <string name="title_activity_picture_mode3x3">PictureMode3x3</string>
     <string name="title_activity_picture_mode4x4">PictureMode4x4</string>
@@ -26,5 +25,7 @@
     <string name="title_activity_number_mode2x2">NumberMode2x2</string>
     <string name="title_activity_number_mode3x3">NumberMode3x3</string>
     <string name="title_activity_number_mode4x4">NumberMode4x4</string>
+    <string name="title_activity_preferences">Preferences</string>
+    <string name="savePref">Save</string>
 
 </resources>

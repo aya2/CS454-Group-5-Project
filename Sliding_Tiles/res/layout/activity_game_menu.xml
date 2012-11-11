@@ -55,5 +55,14 @@
         android:layout_marginBottom="48dp"
         android:onClick="OpenInstructions"
         android:text="@string/instructions_btn" />
+
+    <Button
+        android:id="@+id/pref"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="Preference"
+        android:onClick="OpenPref" />
 
 </RelativeLayout>
