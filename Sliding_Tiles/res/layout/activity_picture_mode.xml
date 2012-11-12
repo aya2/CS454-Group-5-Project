@@ -1,31 +1,42 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
     android:background="@drawable/bggeneral" >
 
 
 <GridView xmlns:android="http://schemas.android.com/apk/res/android" 
 	    android:id="@+id/gridview"
+	    android:listSelector="@android:color/transparent"
 	    android:layout_width="fill_parent" 
-	    android:layout_height="fill_parent"
+	    android:layout_height="wrap_content"
 	    android:columnWidth="90dp"
 	    android:numColumns="5"
 	    android:verticalSpacing="-1px"
 	    android:horizontalSpacing="500dp"
 	    android:stretchMode="spacingWidth"
 	    android:gravity="center"
+	    
 	  
 	/>
 
-<ImageView 
-   android:id="@+id/test_image"
-   android:src="@drawable/guineapigfinished1"
-   android:layout_width="90dip"
-   android:layout_height="90dip"
-   android:layout_alignParentRight="true"
-   android:layout_alignParentBottom="true"
-   />
+<GridView xmlns:android="http://schemas.android.com/apk/res/android" 
+	    android:id="@+id/gridview1"
+	    android:layout_width="210dp" 
+	    android:layout_height="fill_parent"
+	    android:columnWidth="120dp"
+	    android:numColumns="5"
+	    android:verticalSpacing="-1px"
+	    android:horizontalSpacing="500dp"
+	    android:stretchMode="spacingWidth"
+	    android:listSelector="@android:color/transparent"
+	    android:gravity="right"
+	    android:layout_below="@+id/gridview"
+	    android:scrollY="-50dp"
+	  
+	/>
+
 
  </RelativeLayout>
  

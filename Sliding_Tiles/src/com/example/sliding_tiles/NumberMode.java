@@ -7,10 +7,13 @@
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
+import android.app.Instrumentation;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.View;
+import android.view.View.OnKeyListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.GridView;
@@ -81,6 +84,61 @@ public class NumberMode extends Activity {
          }
 
            
+        });
+        
+        
+        final GridView gridview1 = (GridView) findViewById(R.id.gridview1);
+        final ImageAdapterAI i1 = new ImageAdapterAI(this);
+        gridview1.setAdapter(i1);
+        
+        
+       new Thread(new Runnable() {         
+            public void run() {
+                try {
+                Instrumentation inst = new Instrumentation();
+                inst.sendKeyDownUpSync(KeyEvent.KEYCODE_DPAD_RIGHT);
+                inst.sendKeyDownUpSync(KeyEvent.KEYCODE_DPAD_DOWN);
+                inst.sendKeyDownUpSync(KeyEvent.KEYCODE_DPAD_DOWN);
+                inst.sendKeyDownUpSync(KeyEvent.KEYCODE_DPAD_DOWN);
+                inst.sendKeyDownUpSync(KeyEvent.KEYCODE_DPAD_DOWN);
+                inst.sendKeyDownUpSync(KeyEvent.KEYCODE_DPAD_DOWN);
+                inst.sendKeyDownUpSync(KeyEvent.KEYCODE_DPAD_DOWN);
+                inst.sendKeyDownUpSync(KeyEvent.KEYCODE_DPAD_DOWN);
+                for ( int j = 0; j < 10; j++ ) {
+                    inst.sendKeyDownUpSync(KeyEvent.KEYCODE_0);
+                    
+        
+                    
+                    Thread.sleep(2000);
+                }
+                }
+                catch(InterruptedException e){
+                }
+            }   
+        }).start(); 
+        
+    
+     
+        gridview1.setOnKeyListener(new OnKeyListener() {
+        	public boolean onKey(View v, int keyCode, KeyEvent event) {
+        			
+        		if(keyCode == 4){
+        			//I hate you man, you made me and my husband crazy!
+        		}
+        		
+        		else{
+        				i1.shuffleArray();
+                		i1.notifyDataSetChanged();
+        		}
+                		
+                		
+        			
+        				
+        			
+				return false;
+        	
+        	}
+        	
         });
         
     }

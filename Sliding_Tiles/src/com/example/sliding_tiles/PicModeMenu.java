@@ -1,16 +1,11 @@
 package com.example.sliding_tiles;
 
-import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
-import android.support.v4.app.NavUtils;
 import android.content.SharedPreferences;
-import android.content.SharedPreferences.Editor;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.View;
 
 public class PicModeMenu extends Activity {
 	private SharedPreferences prefer;
