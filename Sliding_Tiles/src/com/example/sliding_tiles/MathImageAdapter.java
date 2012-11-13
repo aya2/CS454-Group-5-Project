@@ -143,6 +143,6 @@ public class MathImageAdapter extends BaseAdapter
 	
 	private Integer[] boardArray =
 	{
-		5,13,12,4,9,1,9,20,21,15,2,3,28,6,22,7,23,18,19,26,8 ,10 ,11 ,14 ,22
+			11,25,0,24,12,1,24,20,21,15,2,3,28,6,22,7,23,27,19,26,8 ,10 ,11 ,14 ,22
 	};
 }

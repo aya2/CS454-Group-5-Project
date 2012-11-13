@@ -1,15 +1,10 @@
 package com.example.sliding_tiles;
 
-import android.os.Bundle;
 import android.app.Activity;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.support.v4.app.NavUtils;
-import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.SharedPreferences.Editor;
+import android.os.Bundle;
+import android.view.Menu;
 import android.view.View;
-import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 public class Preferences extends Activity {

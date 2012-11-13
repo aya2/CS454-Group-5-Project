@@ -5,7 +5,16 @@
     android:stretchColumns="1" 
     android:orientation="vertical"
     android:background="@drawable/bgmath" >
-   
+ 
+ 	<android.gesture.GestureOverlayView
+    	xmlns:android="http://schemas.android.com/apk/res/android"
+    	android:id="@+id/gestures"
+    	android:layout_width="fill_parent"
+    	android:layout_height="0dp"
+    	android:orientation="vertical"
+    	android:gestureColor="#DE00FF"
+		android:layout_weight="0.6">
+		
     <GridView
         android:id="@+id/gridView1"
         android:layout_width="fill_parent"
@@ -19,34 +28,41 @@
         android:verticalSpacing="-1dp" >
 
     </GridView>
-
+	
+	</android.gesture.GestureOverlayView>  
+    
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.2" >
+        android:layout_weight="0.4" >
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="34dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/rounded"
+            android:gravity="center"
+            android:text="0"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textSize="50dp" />
 
         <TextView
             android:id="@+id/textView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="32dp"
-            android:text="valid"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/textView1"
-            android:layout_alignBottom="@+id/textView1"
+            android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="33dp"
-            android:text="invalid"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+            android:layout_marginBottom="16dp"
+            android:layout_marginRight="18dp"
+            android:background="#FFFAFA"
+            android:text="Congrats, valid equation!"
+          
+            android:textAppearance="?android:attr/textAppearanceMedium" />
 
     </RelativeLayout>
    
 </LinearLayout>
-
