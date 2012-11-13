@@ -11,12 +11,21 @@ import android.view.View;
 import android.content.SharedPreferences;
 
 public class GameMenu extends Activity {
+	private SharedPreferences.Editor editor;
 	private SharedPreferences prefer;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_menu);
+        
+        
+        //set default sizes
+        prefer = getSharedPreferences("preference", MODE_PRIVATE);
+        editor = prefer.edit();
+        
+        editor.putInt("NumModeSize", 7);
+        editor.putInt("PicModeSize", 3);
     }
 
     @Override
@@ -25,17 +34,39 @@ public class GameMenu extends Activity {
         return true;
     }
     
-    /*Called when user clicks Number Button*/
-    public void OpenNumberMode(View view) {
-    	Intent intent = new Intent(this, NumberModeMenu.class);
+    /*Called when user clicks Math Mode Button*/
+    public void OpenMathMode(View view) {
+    	Intent intent = new Intent(this, MathMode.class);
     	startActivity(intent);
     }
     
-    //called when user clicks math mode
-    public void OpenMathMode(View view)
+    //called when user clicks Number mode
+    public void OpenNumberMode(View view)
     {
-    	Intent intent = new Intent(this, MathMode.class);
-    	startActivity(intent);
+    	//Intent intent = new Intent(this, MathMode.class);
+    	//startActivity(intent);
+    	
+    	 prefer = getSharedPreferences("preference", MODE_PRIVATE);
+         int selectedNum = prefer.getInt("NumModeSize", 0);
+         	
+         //Open different size games depending on radio button selected
+         if (4 == selectedNum){
+         	Intent intent = new Intent(this, NumberMode2x2.class);
+         	startActivity(intent);
+         }
+         else if (5 == selectedNum){
+         	Intent intent = new Intent(this, NumberMode3x3.class);
+         	startActivity(intent);
+         }
+         else if (6 == selectedNum){
+         	Intent intent = new Intent(this, NumberMode4x4.class);
+         	startActivity(intent);
+         }
+         else if (7 == selectedNum){
+         	Intent intent = new Intent(this, NumberMode.class);
+         	startActivity(intent);        		
+         }
+    	
     }
     
     public void OpenPictureMode(View view)

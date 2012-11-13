@@ -78,6 +78,32 @@ public class Preferences extends Activity {
         	editor.putInt("PicAI",  0); //0 for Ai mode off
         }
         
+        //Number Mode Sizes
+        if (R.id.radio4 == selectedNumSize){
+        	editor.putInt("NumModeSize", 4); //0 for picture mode 2x2
+        	
+    	}
+    	else if (R.id.radio5 == selectedNumSize){
+    		editor.putInt("NumModeSize", 5);
+
+    	}
+    	else if (R.id.radio6 == selectedNumSize){
+    		editor.putInt("NumModeSize", 6);
+
+    	}
+    	else if (R.id.radio7 == selectedNumSize){
+    		editor.putInt("NumModeSize", 7);
+
+    	}
+        
+      //Number Mode AI
+        if (R.id.radioOn == selectedNumAI){
+        	editor.putInt("numAI",  1); //1 for AI mode on
+        }
+        else {
+        	editor.putInt("numAI",  0); //0 for Ai mode off
+        }
+        
         editor.commit();
     	
     }

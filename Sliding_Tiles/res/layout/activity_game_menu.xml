@@ -2,67 +2,60 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bggeneral" >
-
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="38dp"
-        android:padding="@dimen/padding_medium"
-        android:text="@string/choose_game"
-        android:textColor="#553300"
-        android:textSize="12pt"
-        tools:context=".GameMenu" />
+    android:background="@drawable/bgmenu" >
 
-    <Button
-        android:id="@+id/MathModeBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView1"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
-        android:onClick="OpenMathMode"
-        android:text="@string/math_mode_btn" />
-
-    <Button
-        android:id="@+id/NumModeBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/MathModeBtn"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
-        android:onClick="OpenNumberMode"
-        android:text="@string/num_mode_btn" />
-
-    <Button
-        android:id="@+id/PicModeBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/NumModeBtn"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
-        android:onClick="OpenPictureMode"
-        android:text="@string/pic_mode_btn" />
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="48dp"
-        android:onClick="OpenInstructions"
-        android:text="@string/instructions_btn" />
-
     <Button
         android:id="@+id/pref"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:text="Preference"
-        android:onClick="OpenPref" />
+        android:background="@drawable/prefbtn"
+        android:onClick="OpenPref"
+        android:text=" " />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/pref"
+        android:layout_alignLeft="@+id/pref"
+        android:layout_marginBottom="37dp"
+        android:background="@drawable/instbtn"
+        android:onClick="OpenInstructions"
+        android:text=" " />
+
+    <Button
+        android:id="@+id/PicModeBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button1"
+        android:layout_alignLeft="@+id/button1"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/picbtn"
+        android:onClick="OpenPictureMode"
+        android:text="  " />
+
+    <Button
+        android:id="@+id/NumModeBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/PicModeBtn"
+        android:layout_alignLeft="@+id/PicModeBtn"
+        android:layout_marginBottom="38dp"
+        android:background="@drawable/numbtn"
+        android:onClick="OpenNumberMode"
+        android:text="  " />
+
+    <Button
+        android:id="@+id/MathModeBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/NumModeBtn"
+        android:layout_alignLeft="@+id/NumModeBtn"
+        android:layout_marginBottom="37dp"
+        android:background="@drawable/mathbtn"
+        android:onClick="OpenMathMode"
+        android:text="   " />
 
 </RelativeLayout>
