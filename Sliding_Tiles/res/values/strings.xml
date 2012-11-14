@@ -27,5 +27,7 @@
     <string name="title_activity_number_mode4x4">NumberMode4x4</string>
     <string name="title_activity_preferences">Preferences</string>
     <string name="savePref">Save</string>
+    <string name="title_activity_number_mode_no_ai">NumberModeNoAI</string>
+    <string name="title_activity_picture_mode_no_ai">PictureModeNoAI</string>
 
 </resources>

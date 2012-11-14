@@ -47,6 +47,9 @@ public class GameMenu extends Activity {
     	
     	 prefer = getSharedPreferences("preference", MODE_PRIVATE);
          int selectedNum = prefer.getInt("NumModeSize", 0);
+         int selectedAI = prefer.getInt("numAI", 0);
+         
+        
          	
          //Open different size games depending on radio button selected
          if (4 == selectedNum){
@@ -61,9 +64,13 @@ public class GameMenu extends Activity {
          	Intent intent = new Intent(this, NumberMode4x4.class);
          	startActivity(intent);
          }
-         else if (7 == selectedNum){
+         else if (7 == selectedNum && selectedAI == 1 ){
          	Intent intent = new Intent(this, NumberMode.class);
-         	startActivity(intent);        		
+         	startActivity(intent);  
+         }
+         	else if (7 == selectedNum && selectedAI == 0 ){
+             	Intent intent = new Intent(this, NumberModeNoAI.class);
+             	startActivity(intent);   
          }
     	
     }
@@ -78,6 +85,7 @@ public class GameMenu extends Activity {
         //int selected = sizes.getCheckedRadioButtonId();
         prefer = getSharedPreferences("preference", MODE_PRIVATE);
         int selected = prefer.getInt("PicModeSize", 0);
+        int selectedAI = prefer.getInt("PicAI", 0);
         	
         //Open different size games depending on radio button selected
         if (0 == selected){
@@ -92,8 +100,12 @@ public class GameMenu extends Activity {
         	Intent intent = new Intent(this, PictureMode4x4.class);
         	startActivity(intent);
         }
-        else if (3 == selected){
+        else if (3 == selected && selectedAI == 1){
         	Intent intent = new Intent(this, PictureMode.class);
+        	startActivity(intent);        		
+        }
+        else if (3 == selected && selectedAI == 0){
+        	Intent intent = new Intent(this, PictureModeNoAI.class);
         	startActivity(intent);        		
         }
     }

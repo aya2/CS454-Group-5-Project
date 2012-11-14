@@ -32,7 +32,7 @@ public class NumberMode extends Activity {
         final AlertDialog.Builder b = new AlertDialog.Builder(this);
        // final TextView textView = new TextView(this);
         gridview.setAdapter(i);
-        i.shuffleArray();
+       // i.shuffleArray();
         
         gridview.setOnItemClickListener(new OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
@@ -91,10 +91,43 @@ public class NumberMode extends Activity {
         final ImageAdapterAI i1 = new ImageAdapterAI(this);
         gridview1.setAdapter(i1);
         
+       final TilesAI AI = new TilesAI();
+       
+       
+       new Thread(new Runnable() {         
+           public void run() {
+               
+        	   int done;
+        	   done = AI.solveAI(i1.board, 1);
+              if(done == 1){
+        	   b.setIcon(android.R.drawable.ic_dialog_alert);
+          	   b.setTitle("YOU LOSE!");
+          	   b.setMessage("Do you want to play again?");
+          	 b.setPositiveButton("Yes",new DialogInterface.OnClickListener() {  
+       		    public void onClick(DialogInterface dialog, int which) { 
+       		        Intent myIntent = new Intent(((Dialog) dialog).getContext(), PictureMode.class);
+       		        startActivity(myIntent);    
+       		        return;  
+       		        }        
+       		    });      
+       	   b.setNegativeButton("No", new DialogInterface.OnClickListener() {  
+       		    public void onClick(DialogInterface dialog, int which) { 
+       		        Intent myIntent = new Intent(((Dialog) dialog).getContext(), GameMenu.class);
+       		        startActivity(myIntent);    
+       		        return;  
+       		        }        
+       		    });      
+       	   b.show();
+              }
+           }
+       }).start(); 
         
+       //send 100 key 0 presses, display if there is any change in the i1.board array updated 
+       //by the AI
        new Thread(new Runnable() {         
             public void run() {
                 try {
+                
                 Instrumentation inst = new Instrumentation();
                 inst.sendKeyDownUpSync(KeyEvent.KEYCODE_DPAD_RIGHT);
                 inst.sendKeyDownUpSync(KeyEvent.KEYCODE_DPAD_DOWN);
@@ -104,16 +137,20 @@ public class NumberMode extends Activity {
                 inst.sendKeyDownUpSync(KeyEvent.KEYCODE_DPAD_DOWN);
                 inst.sendKeyDownUpSync(KeyEvent.KEYCODE_DPAD_DOWN);
                 inst.sendKeyDownUpSync(KeyEvent.KEYCODE_DPAD_DOWN);
-                for ( int j = 0; j < 10; j++ ) {
+                for ( int j = 0; j < 100; j++ ) {
                     inst.sendKeyDownUpSync(KeyEvent.KEYCODE_0);
                     
         
                     
-                    Thread.sleep(2000);
+                    Thread.sleep(1000);
                 }
-                }
-                catch(InterruptedException e){
-                }
+                } catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+                finally{}
+               // catch(InterruptedException e){
+                //}
             }   
         }).start(); 
         
@@ -123,11 +160,11 @@ public class NumberMode extends Activity {
         	public boolean onKey(View v, int keyCode, KeyEvent event) {
         			
         		if(keyCode == 4){
-        			//I hate you man, you made me and my husband crazy!
+        			
         		}
         		
         		else{
-        				i1.shuffleArray();
+        				//i1.shuffleArray();
                 		i1.notifyDataSetChanged();
         		}
                 		

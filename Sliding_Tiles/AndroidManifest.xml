@@ -75,6 +75,19 @@
             android:name=".Preferences"
             android:label="@string/title_activity_preferences" >
         </activity>
+        <activity
+            android:name=".NumberModeNoAI"
+            android:label="@string/title_activity_number_mode_no_ai" >
+        </activity>
+        <activity
+            android:name=".PictureModeNoAI"
+            android:label="@string/title_activity_picture_mode_no_ai" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

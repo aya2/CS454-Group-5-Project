@@ -66,6 +66,7 @@ public class ImageAdapterAI extends BaseAdapter {
     
   
 	public Integer[] mThumbIds = {
+			R.drawable.tileempty1,
             R.drawable.tile1, R.drawable.tile2,
             R.drawable.tile3, R.drawable.tile4,
             R.drawable.tile5, R.drawable.tile6,
@@ -77,12 +78,11 @@ public class ImageAdapterAI extends BaseAdapter {
             R.drawable.tile17, R.drawable.tile18,
             R.drawable.tile19, R.drawable.tile20,
             R.drawable.tile21, R.drawable.tile22,
-            R.drawable.tile23, R.drawable.tile24,
-            R.drawable.tileempty1,
+            R.drawable.tile23, R.drawable.tile24
     };
     // references to our images
-    public Integer[] board = {
-    		0,1,2,3,4,5,6,7,8,9,10,11,24,12,13,14,15,16,17,18,19,20,21,22,23
+	public int[] board = {
+    		1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,0,24
  
     };
     
