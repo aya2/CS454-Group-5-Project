@@ -3,6 +3,7 @@ package com.example.sliding_tiles;
 import java.util.ArrayList;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.res.Resources;
 import android.gesture.Gesture;
 import android.gesture.GestureLibraries;
@@ -10,15 +11,23 @@ import android.gesture.GestureLibrary;
 import android.gesture.GestureOverlayView;
 import android.gesture.GestureOverlayView.OnGesturePerformedListener;
 import android.gesture.Prediction;
+import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.GestureDetector;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.Button;
 import android.widget.GridView;
+import android.widget.PopupWindow;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MathMode extends Activity implements OnGesturePerformedListener	
 {
@@ -34,6 +43,9 @@ public class MathMode extends Activity implements OnGesturePerformedListener
 	
 	//textView for message
 	private TextView validMessage;
+	
+	//pop up window
+	private PopupWindow popWin;
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) 
@@ -51,12 +63,12 @@ public class MathMode extends Activity implements OnGesturePerformedListener
 		gridview.setAdapter(mathadapter);
 
 		//setup the textView for the score
-		Resources res = getResources(); 
-		Drawable shape = res.getDrawable(R.drawable.rounded);
+		//Resources res = getResources(); 
+		//Drawable shape = res.getDrawable(R.drawable.blanktile);
 		
 		//TextView tv = (TextView)findViewById(R.id.textView3);
 		score = (TextView) findViewById(R.id.textView3);
-		score.setBackgroundDrawable(shape);
+		//score.setBackgroundDrawable(shape);
 		
 		//set up the textView for the valid/invalid message
 		validMessage = (TextView)findViewById(R.id.textView1);
@@ -111,12 +123,55 @@ public class MathMode extends Activity implements OnGesturePerformedListener
 				//Toast.makeText(this, result + "score =  " + prediction.score, Toast.LENGTH_LONG).show();
 				
 				//show the message
-				validMessage.setVisibility(validMessage.VISIBLE);
+				//validMessage.setVisibility(validMessage.VISIBLE);
 				
+				//call pop up window
+				initiatePopupWindow();
 				//update the score
-				score.setText("13");
+				score.setText("3");
 			}
 		}
+	}//end of on gesture performed
+	
+	//pop up window stuff
+	private void initiatePopupWindow() 
+	{
+	    try 
+	    {
+	       
+	        LayoutInflater inflater = (LayoutInflater)getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+	        //Inflate the view from a predefined XML layout
+	        View layout = inflater.inflate(R.layout.popup,(ViewGroup) findViewById(R.id.popupEl));
+	        // create a 300px width and 470px height PopupWindow
+	        popWin = new PopupWindow(layout, 300, 470, true);
+	        
+	        popWin.setBackgroundDrawable(new BitmapDrawable());
+	        popWin.setOutsideTouchable(true);
+	        //popWin.showAsDropDown(btnSelectWeight);
+	        // display the popup in the center
+	        popWin.showAtLocation(layout, Gravity.CENTER, 0, 0);
+	 
+	       // mResultText = (TextView) layout.findViewById(R.id.server_status_text);
+	        Button returnButton = (Button) layout.findViewById(R.id.returnButton);
+	        //makeBlack(returnButton);
+	        
+	       
+	        returnButton.setOnClickListener(returnListener);
+	 
+	    } catch (Exception e) 
+	    {
+	        e.printStackTrace();
+	    }
 	}
+	 
+	private OnClickListener returnListener = new OnClickListener()
+	{
+	    public void onClick(View v) 
+	    {
+	    	//Toast.makeText(v.getContext(), "click registerd", Toast.LENGTH_LONG).show();
+	    	 // popWin.showAsDropDown(v);
+	        popWin.dismiss();
+	    }
+	};
 
 }

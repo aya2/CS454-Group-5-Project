@@ -110,6 +110,7 @@ public class MathImageAdapter extends BaseAdapter
 	
 	private Integer[] mThumbIds =
 	{
+		R.drawable.tile0,
 		R.drawable.tile1,
 		R.drawable.tile2,
 		R.drawable.tile3,
@@ -119,7 +120,7 @@ public class MathImageAdapter extends BaseAdapter
 		R.drawable.tile7,
 		R.drawable.tile8,
 		R.drawable.tile9,
-		R.drawable.tile10,
+	/*	R.drawable.tile10,
 		R.drawable.tile11,
 		R.drawable.tile12,
 		R.drawable.tile13,
@@ -133,16 +134,16 @@ public class MathImageAdapter extends BaseAdapter
 		R.drawable.tile21,
 		R.drawable.tile22,
 		R.drawable.tile23,
-		R.drawable.tile24,
-		R.drawable.tile_equal,
-		R.drawable.tile_plus,
-		R.drawable.tile_minus,
-		R.drawable.tile_multiply,
-		R.drawable.tileempty1
+		R.drawable.tile24,*/
+		R.drawable.tile_equal, //10
+		R.drawable.tile_plus,  //11 
+		R.drawable.tile_minus, //12
+		R.drawable.tile_multiply, //13
+		R.drawable.tileempty1 //14
 	};
 	
 	private Integer[] boardArray =
 	{
-			11,25,0,24,12,1,24,20,21,15,2,3,28,6,22,7,23,27,19,26,8 ,10 ,11 ,14 ,22
+			1,11,2,10,3,1,10,0,2,5,2,3,8,6,2,7,3,7,9,6,8 ,10 ,11 ,14 ,5
 	};
 }

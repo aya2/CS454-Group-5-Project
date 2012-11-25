@@ -12,7 +12,7 @@
     	android:layout_width="fill_parent"
     	android:layout_height="0dp"
     	android:orientation="vertical"
-    	android:gestureColor="#DE00FF"
+    	android:gestureColor="#FF0022"
 		android:layout_weight="0.6">
 		
     <GridView
@@ -44,11 +44,11 @@
             android:layout_alignParentLeft="true"
             android:layout_marginBottom="34dp"
             android:layout_marginLeft="20dp"
-            android:background="@drawable/rounded"
+            android:background="@drawable/blanktile"
             android:gravity="center"
             android:text="0"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textSize="50dp" />
+            android:textSize="40dp" />
 
         <TextView
             android:id="@+id/textView1"
@@ -59,7 +59,7 @@
             android:layout_marginBottom="16dp"
             android:layout_marginRight="18dp"
             android:background="#FFFAFA"
-            android:text="Congrats, valid equation!"
+            android:text="Congrats, not valid equation!"
           
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
